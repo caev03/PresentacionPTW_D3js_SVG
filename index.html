@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1>D3.js and HTML5 Graphic management</h1>
+            <table>
+                <tr>
+                    <td><img
+                            src="https://d1xwtr0qwr70yv.cloudfront.net/assets/tech/d3-e8f9baa677bcbdc852acad420a53fb4f.svg"
+                            style="width: 200px; heigth: auto"></td>
+                    <td><img src="http://www.websarrolladores.com/wp-content/uploads/2016/04/HTML5.jpg"
+                             style="width: 200px; heigth: auto"></td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <iframe src="https://d3js.org/" class="blocks" style="background-color: white"></iframe>
+        </section>
+        <section>
+            <section>
+                <h1>Conceptos Fundamentales</h1>
+            </section>
+            <section>
+                <h1>HTML</h1>
+                <blockquote cite="https://en.wikipedia.org/wiki/HTML">
+                    &ldquo;<strong>HyperText Markup Language</strong> (HTML) is the standard markup language for creating web pages and web
+                    applications.[...] HTML describes the structure of a web page semantically and originally included cues
+                    for the appearance of the document.&rdquo;
+                </blockquote>
+            </section>
+            <section>
+                <h1>CSS</h1>
+                <blockquote cite="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">
+                    &ldquo;<strong>Cascading Style Sheets</strong> (CSS) is a style sheet language used for describing the presentation of
+                    a document written in a markup language. [...] the language can be applied to any XML document,
+                    including plain XML, SVG and XUL.&rdquo;
+                </blockquote>
+            </section>
+            <section>
+                <h1>JavaScript</h1>
+                <blockquote cite="https://en.wikipedia.org/wiki/JavaScript">
+                    &ldquo;<strong>JavaScript</strong> is a high-level, dynamic, untyped, and interpreted programming language.
+                    [...] Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production;
+                    the majority of websites employ it, and all modern Web browsers supported it without the need for plug-ins..&rdquo;
+                </blockquote>
+            </section>
+            <section>
+                <h1>SVG</h1>
+                <blockquote cite="https://en.wikipedia.org/wiki/HTML">
+                    &ldquo;<strong>Scalable Vector Graphics</strong> (SVG) is an XML-based vector image format for two-dimensional graphics with support
+                    for interactivity and animation. [...] SVG images and their behaviors are defined in XML text files. This means that
+                    they can be searched, indexed, scripted, and compressed.&rdquo;
+                </blockquote>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Tutorial fundamentos de D3.js</h1>
+            </section>
+            <section>
+                <h1>Herramientas a usar:</h1>
+                <ul>
+                    <li><a href="http://jsfiddle.net" target="_blank">JSFiddle</a></li>
+                    <li><a href="https://d3js.org/d3.v4.min.js" target="_blank">D3 library</a> </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Paso 1: Configurar D3.js</h3>
+                <a href="https://jsfiddle.net/caev03/159refzy/">Link Actual</a>
+                <iframe src="https://jsfiddle.net/caev03/159refzy/" class="blocks"></iframe>
+            </section>
+            <section>
+                <h3>Primer acercamiento:</h3>
+                <a href="https://jsfiddle.net/caev03/159refzy/1">Link Actual</a>
+                <iframe src="https://jsfiddle.net/caev03/159refzy/1" class="blocks"></iframe>
+            </section>
+            <section>
+                <h3>Manos a la obra:</h3>
+                <a href="https://jsfiddle.net/caev03/159refzy/3">Link Actual</a>
+                <iframe src="https://jsfiddle.net/caev03/159refzy/3" class="blocks"></iframe>
+            </section>
+
+        </section>
+        <section>
+            <h3>Bibliografia:</h3>
+            <ul>
+                <li>https://www.dashingd3js.com/adding-an-svg-element</li>
+                <li>https://square.github.io/intro-to-d3/data-binding/</li>
+                <li>https://jsfiddle.net/duto_guerra/8srf6rLd/3/</li>
+                <li>https://jsfiddle.net/duto_guerra/8srf6rLd/15/</li>
+                <li>https://jsfiddle.net/duto_guerra/jg0cz73a/30/</li>
+
+            </ul>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            }
+        ]
+    });
+</script>
+<script>
+    var asd = document.getElementsByTagName("section");
+    for (var i = asd.length - 1; i >= 0; i--) {
+        asd[i].setAttribute("data-background-image", "imgs/backgroundImage1.jpg");
+    }
+</script>
+</body>
+</html>
