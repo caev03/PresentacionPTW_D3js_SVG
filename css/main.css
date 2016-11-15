@@ -70,3 +70,13 @@ p{
   height: 500px;
   width: auto;
 }
+
+#canvas-intro img, #svg-intro img{
+  height: 200px;
+  width: auto;
+}
+
+/*.canvastut img{
+  height: 100px;
+  width: auto;
+}*/
