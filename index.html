@@ -12,6 +12,10 @@
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
+    <link rel="stylesheet" href="css/main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement('link');
@@ -24,17 +28,17 @@
 <body>
 <div class="reveal">
     <div class="slides">
-        <section>
-            <h1>D3.js and HTML5 Graphic management</h1>
-            <table>
+        <section id="portada">
+            <h1>Gráficos Web</h1>
+            <h2>D3.js y HTML5</h2>
+            <!-- <table>
                 <tr>
-                    <td><img
-                            src="https://d1xwtr0qwr70yv.cloudfront.net/assets/tech/d3-e8f9baa677bcbdc852acad420a53fb4f.svg"
-                            style="width: 200px; heigth: auto"></td>
+                    <td><img src="https://d1xwtr0qwr70yv.cloudfront.net/assets/tech/d3-e8f9baa677bcbdc852acad420a53fb4f.svg"
+                            style="height: 100px; width: auto"></td>
                     <td><img src="http://www.websarrolladores.com/wp-content/uploads/2016/04/HTML5.jpg"
-                             style="width: 200px; heigth: auto"></td>
+                             style="height: 100px; width: auto"></td>
                 </tr>
-            </table>
+            </table> -->
         </section>
         <section>
             <iframe src="https://d3js.org/" class="blocks" style="background-color: white"></iframe>
@@ -42,39 +46,126 @@
         <section>
             <section>
                 <h1>Conceptos Fundamentales</h1>
+                <img id="icons" src="./imgs/html5-css-javascript-logos.png">
             </section>
             <section>
-                <h1>HTML</h1>
+                <h2>HTML</h2>
                 <blockquote cite="https://en.wikipedia.org/wiki/HTML">
-                    &ldquo;<strong>HyperText Markup Language</strong> (HTML) is the standard markup language for creating web pages and web
-                    applications.[...] HTML describes the structure of a web page semantically and originally included cues
-                    for the appearance of the document.&rdquo;
+                    &ldquo;<strong>HyperText Markup Language</strong> (HTML) es el lenguaje estándar de marcado para crear páginas y
+                    aplicaciones web.[...] HTML describe la estructura de una página a partir de etiquetas que en algunos casos dan cuenta
+                    del contenido de la misma.&rdquo;
                 </blockquote>
             </section>
             <section>
-                <h1>CSS</h1>
+                <h2>CSS</h2>
                 <blockquote cite="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">
-                    &ldquo;<strong>Cascading Style Sheets</strong> (CSS) is a style sheet language used for describing the presentation of
-                    a document written in a markup language. [...] the language can be applied to any XML document,
-                    including plain XML, SVG and XUL.&rdquo;
+                    &ldquo;<strong>Cascading Style Sheets</strong> (CSS) es un lenguaje de hojas de estilo utilizado para describir
+                    la presentación de un documento escrito en lenguaje de marcado. [...] el lenguaje puede ser aplicado a cualquier
+                    documento XML, incluyendo XML plano, SVG y XUL.&rdquo;
                 </blockquote>
             </section>
             <section>
-                <h1>JavaScript</h1>
+                <h2>JavaScript</h2>
                 <blockquote cite="https://en.wikipedia.org/wiki/JavaScript">
-                    &ldquo;<strong>JavaScript</strong> is a high-level, dynamic, untyped, and interpreted programming language.
-                    [...] Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production;
-                    the majority of websites employ it, and all modern Web browsers supported it without the need for plug-ins..&rdquo;
+                    &ldquo;<strong>JavaScript</strong> es un lenguaje de programación de alto nivel, dinámico, no tipado e interpretado.
+                    [...] Junto con HTML y CSS, JavaScript es uno de las tres principales tecnologías de la producción de contenido web;
+                    la mayoría de sitios web lo utilizan, y todos los exploradores web modernos lo soportan sin necesidad de plug-ins.&rdquo;
                 </blockquote>
             </section>
             <section>
-                <h1>SVG</h1>
+                <h2>SVG</h2>
                 <blockquote cite="https://en.wikipedia.org/wiki/HTML">
-                    &ldquo;<strong>Scalable Vector Graphics</strong> (SVG) is an XML-based vector image format for two-dimensional graphics with support
-                    for interactivity and animation. [...] SVG images and their behaviors are defined in XML text files. This means that
-                    they can be searched, indexed, scripted, and compressed.&rdquo;
+                    &ldquo;<strong>Scalable Vector Graphics</strong> (SVG) es un formato de imagen vectorial basado en XML. Se utiliza
+                    para gráficos bidimensionalesis y soporta tanto interactividad como animación. [...] Las imágenes SVG y su comportamiento
+                    se definen en archivos de texto XML. Esto significa que pueden ser buscadas, indexadas y comprimidas.&rdquo;
                 </blockquote>
             </section>
+        </section>
+        <section>
+            <section>
+                <h1>Novedades en HTML5</h1>
+                <img id="htmlicon" src="./imgs/html5.png">
+            </section>
+            <section id="semantics">
+                <h2>Estructura de página</h2>
+                <p>
+                  Etiquetas que permiten estructurar la página y brindarle sentido semántico a su contenido
+                </p>
+                <img src="./imgs/semantics1.png">
+                <img src="./imgs/semantics2.png">
+            </section>
+            <section>
+              <h2>Formularios</h2>
+              <p>
+                Nuevos atributos para los tipos de campos de ingreso de datos <i>&lt;input&gt;</i>:
+              </p>
+              <i>
+                <p>&lt;input type="date"&gt; &nbsp;&nbsp;<input type="date"/></p>
+                <p>&lt;input type="time"&gt; &nbsp;&nbsp;<input type="time"/></p>
+                <p>&lt;input type="range"&gt; &nbsp;&nbsp;<input type="range"/></p>
+                <p>&lt;input type="color"&gt; &nbsp;&nbsp;<input type="color"/></p>
+                <p>&lt;input type="search"&gt; &nbsp;&nbsp;<input type="search"/></p>
+                <p>...</p>
+              </i>
+              <p>
+                Nuevo elemento <i>&lt;output&gt;</i>:
+              </p>
+              <form onsubmit="return false" oninput="o.value = parseInt(a.value) + parseInt(b.value)">
+                <input name="a" type="number" step="any"> +
+                <input name="b" type="number" step="any"> =
+                <output name="o"></output>
+              </form>
+            </section>
+            <section>
+                <h2>Multimedia: &lt;video&gt;</h2>
+                <p>
+                  Etiqueta que permite añadir videos
+                </p>
+                <video width="500" autoplay>
+                  <source src="./imgs/video.mp4" type="video/mp4">
+                </video>
+                <p><i>
+                  &lt;video width="500" autoplay&gt;<br />
+                  &lt;source src="./imgs/video.mp4" type="video/mp4"&gt;<br />
+                  &lt;/video&gt;
+                </i></p>
+            </section>
+            <section>
+                <h2>Multimedia: &lt;audio&gt;</h2>
+                <p>
+                  Etiqueta que permite añadir pistas de audio
+                </p>
+                <audio id="audio1" controls>
+                  <source src="http://www.noiseaddicts.com/samples_1w72b820/2514.mp3" type="audio/mpeg">
+                </audio>
+                <script>
+                myAudio=document.getElementById('audio1');
+                myAudio.addEventListener('canplaythrough', function() {
+                  if(this.currentTime < 6){this.currentTime = 6;}
+                });
+                </script>
+                <p><i>
+                  &lt;audio controls&gt;<br />
+                  &lt;source src="http://www.noiseaddicts.com/samples_1w72b820/2514.mp3" type="audio/mpeg"&gt;<br />
+                  &lt;/audio&gt;
+                </i></p>
+            </section>
+            <section id="apis">
+              <h2>Otros APIs</h2>
+              <img src="./imgs/apis.png">
+            </section>
+        </section>
+        <section>
+          <section>
+            <h1>HTML5: Canvas</h1>
+            <img id="htmlicon" src="./imgs/html5.png">
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>HTML5: SVG</h1>
+            <img id="htmlicon" src="./imgs/html5.png">
+          </section>
         </section>
         <section>
             <section>
